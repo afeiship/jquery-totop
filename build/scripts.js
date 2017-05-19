@@ -12,7 +12,6 @@
 
   gulp.task('scripts', function () {
     return gulp.src('src/scripts/*.js')
-      // .pipe($.uglify())
       .pipe(gulp.dest('dist/scripts'))
       .pipe($.size({title: '[ minimize size ]:'}));
   });
