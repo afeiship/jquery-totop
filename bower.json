@@ -1,0 +1,31 @@
+{
+  "name": "jquery-totop",
+  "description": "jQuery plugin for back to top.",
+  "main": "dist/jquery-totop.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/jquery-totop",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ],
+  "dependencies": {
+    "web-sass-reset": "afeiship/web-sass-reset",
+    "jquery": "1.12.4",
+    "next-js-core": "afeiship/next-js-core"
+  }
+}

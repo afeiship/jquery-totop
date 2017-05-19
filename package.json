@@ -1,0 +1,30 @@
+{
+  "name": "jquery-totop",
+  "version": "0.0.0",
+  "description": "jQuery plugin for back to top.",
+  "homepage": "https://github.com/afeiship/jquery-totop",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "main": "dist/jquery-totop.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp serve"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.1.2",
+    "yargs": "^4.7.1"
+  }
+}
