@@ -1,7 +1,10 @@
 {
   "name": "jquery-totop",
   "description": "jQuery plugin for back to top.",
-  "main": "dist/jquery-totop.js",
+  "main": [
+    "dist/scripts/index.js",
+    "dist/styles/index.css"
+  ],
   "authors": [
     "afei"
   ],
