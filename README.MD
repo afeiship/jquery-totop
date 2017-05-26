@@ -10,5 +10,3 @@
 
 ## resources:
 
-## todos:
-- [ ] todo list..
