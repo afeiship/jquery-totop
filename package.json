@@ -1,6 +1,6 @@
 {
   "name": "@jswork/jquery-totop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jQuery plugin for back to top.",
   "homepage": "https://github.com/afeiship/jquery-totop",
   "author": {
@@ -33,5 +33,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "keywords": [
+    "jquery",
+    "totop"
+  ]
 }
