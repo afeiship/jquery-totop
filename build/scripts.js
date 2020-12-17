@@ -1,25 +1,21 @@
 (function() {
-
   'use strict';
 
-  var gulp = require('gulp');
-  var config = require('./config');
-  var argv = require('yargs').argv;
-  var $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'gulp.*', 'del']
-  });
-  var browserSync = require('browser-sync');
-
-  gulp.task('scripts', function () {
-    return gulp.src('src/scripts/*.js')
-      .pipe(gulp.dest('dist/scripts'))
-      .pipe($.size({title: '[ minimize size ]:'}));
+  const gulp = require('gulp');
+  const saveLicense = require('uglify-save-license');
+  const $ = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'gulp.*', 'del', '@feizheng/gulp-*', '@jswork/gulp-*']
   });
 
-  //watch
-  gulp.task('scripts:watch', function () {
-    gulp.watch('src/scripts/**', ['scripts']);
+  gulp.task('scripts', function() {
+    return gulp
+      .src('src/*.js')
+      .pipe($.jswork.pkgHeader())
+      .pipe(gulp.dest('dist'))
+      .pipe($.size({ title: '[ default size ]:' }))
+      .pipe($.uglify({ output: { comments: saveLicense } }))
+      .pipe($.rename({ extname: '.min.js' }))
+      .pipe(gulp.dest('dist'))
+      .pipe($.size({ title: '[ minimize size ]:' }));
   });
-
-
-}());
+})();

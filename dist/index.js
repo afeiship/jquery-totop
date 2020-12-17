@@ -1,7 +1,15 @@
-(function ($, nx, global) {
+/*!
+ * name: @jswork/jquery-totop
+ * description: jQuery plugin for back to top.
+ * homepage: https://github.com/afeiship/jquery-totop
+ * version: 1.0.0
+ * date: 2020-12-17 15:49:49
+ * license: MIT
+ */
 
+(function ($, nx, global) {
   var TO_TOP_HTML = '<div class="jquery-totop"><span>返回顶部</span></div>';
-  
+
   var Widget = nx.declare({
     statics: {
       options: {
@@ -27,9 +35,12 @@
         });
       },
       totop: function () {
-        this.$docRoot.animate({
-          scrollTop: 0
-        }, this.options.interval);
+        this.$docRoot.animate(
+          {
+            scrollTop: 0
+          },
+          this.options.interval
+        );
       },
       inject: function () {
         var $html = $(TO_TOP_HTML);
@@ -38,10 +49,7 @@
     }
   });
 
-
   $.fn.totop = function (inOptions) {
     new Widget(inOptions);
   };
-
-}($, nx, nx.GLOBAL));
-
+})($, nx, nx.GLOBAL);
