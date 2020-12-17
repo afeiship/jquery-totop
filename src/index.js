@@ -3,14 +3,11 @@
 
   var Widget = nx.declare({
     statics: {
-      options: {
-        interval: 300
-      }
+      options: { interval: 300 }
     },
     methods: {
       init: function (inOptions) {
         this.options = $.extend({}, Widget.options, inOptions);
-
         this.inject();
         this.elements();
         this.events();
@@ -26,16 +23,13 @@
         });
       },
       totop: function () {
-        this.$docRoot.animate(
-          {
-            scrollTop: 0
-          },
-          this.options.interval
-        );
+        this.$docRoot.animate({ scrollTop: 0 }, this.options.interval);
       },
       inject: function () {
-        var $html = $(TO_TOP_HTML);
-        $(document.body).append($html);
+        if (!this.$root.length) {
+          var $html = $(TO_TOP_HTML);
+          $(document.body).append($html);
+        }
       }
     }
   });
