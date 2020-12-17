@@ -11,6 +11,11 @@
 npm install @jswork/jquery-totop
 ```
 
+## usage
+```js
+$().totop();
+```
+
 ## license
 Code released under [the MIT license](https://github.com/afeiship/jquery-totop/blob/master/LICENSE.txt).
 
